@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+    content="width=device-width, initial-scale=1.0">
+
+    <title>Task Manager</title>
+
+    <link rel="stylesheet"
+    href="css/style.css">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="top-bar">
+
+        <div>
+
+            <h1>
+
+                <i class="fa-solid fa-list-check"></i>
+
+                Task Manager
+
+            </h1>
+
+            <p id="welcomeText"></p>
+
+        </div>
+
+        <button class="logout-btn"
+        onclick="logout()">
+
+            <i class="fa-solid fa-right-from-bracket"></i>
+
+            Logout
+
+        </button>
+
+    </div>
+
+    <div class="search-box">
+
+        <input type="text"
+        id="searchTask"
+        placeholder="Search task..."
+        onkeyup="searchTasks()">
+
+    </div>
+
+    <div class="task-input">
+
+        <input type="text"
+        id="taskInput"
+        placeholder="Enter task">
+
+        <!-- DATE INPUT -->
+
+        <input
+        type="date"
+        id="taskDate">
+
+        <button onclick="addTask()">
+
+            <i class="fa-solid fa-plus"></i>
+
+            Add
+
+        </button>
+
+    </div>
+
+    <ul id="taskList"></ul>
+
+</div>
+
+<!-- EDIT MODAL -->
+
+<div class="edit-modal"
+id="editModal">
+
+    <div class="edit-box">
+
+        <h2>Edit Task</h2>
+
+        <input
+        type="text"
+        id="editTaskInput">
+
+        <div class="edit-actions">
+
+            <button
+            class="save-btn"
+            onclick="saveEditedTask()">
+
+                Save
+
+            </button>
+
+            <button
+            class="cancel-btn"
+            onclick="closeEditModal()">
+
+                Cancel
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
